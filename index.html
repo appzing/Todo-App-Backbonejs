@@ -14,28 +14,31 @@
         <script src="js/lib/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <script src="js/lib/jquery-min.js"></script>
+        <script src="js/lib/require.js" data-main="js/main"></script>
+        
+        <!-- <script src="js/lib/jquery-min.js"></script>
         <script src="js/lib/underscore-min.js"></script>
         <script src="js/lib/backbone-min.js"></script>
         <script src="js/lib/handlebars-v3.0.3.js"></script>
-
         <script src="js/main.js"></script>
-
         <script src="js/TodoItem.js"></script>
         <script src="js/TodoItems.js"></script>
         <script src="js/TodoItemView.js"></script>
-        <script src="js/TodoItemsView.js"></script>
+        <script src="js/TodoItemsView.js"></script> -->
 
-        <script type="text/x-handlebars-template" id="todoItemTemplate">
-            <label>
-                <input type="checkbox" {{#if completed }}checked{{/if}} id="toggle">{{title}}<button class="deleteBtn">Delete</button>
-            </label>
-        </script>
+        
         <script type="text/x-handlebars-template" id="addNewItemTemplate">
            <header id="addNewTodoItem">
                <input type="text" autofocus id="newTodoItem" placeholder="Enter task here...">
-           </header>
+           </header>   
            <ul id="todoItems"></ul> 
-        </script>        
+        </script>   
+        
+        <script type="text/x-handlebars-template" id="todoItemTemplate">
+            
+            <label>
+                <input type="checkbox" {{#if completed }}checked{{/if}} id="toggle">{{title}}<button class="deleteBtn">Delete</button>
+            </label>
+        </script>     
     </body>
 </html>

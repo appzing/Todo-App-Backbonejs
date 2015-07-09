@@ -1,7 +1,12 @@
-$(document).ready(function(){
-	var todoItems = new TodoItems();
-	todoItems.fetch();
+require.config({
+	paths: {
+		jquery: 'lib/jquery-min',
+		underscore: 'lib/underscore-min',
+		backbone: 'lib/backbone-min',
+		handlebars: 'lib/handlebars-v3.0.3'
+	}
+});
 
-	var todoItemsView = new TodoItemsView({collection: todoItems});
-	$('body').append(todoItemsView.render().$el);
+define(['app'], function(App){
+	App.initialize();
 });
